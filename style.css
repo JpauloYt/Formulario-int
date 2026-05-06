@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0b2e2b 0%, #1a4a45 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+main {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  color: #004d40;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+p {
+  color: #00695c;
+  margin-bottom: 2rem;
+}
+
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #004d40;
+  margin-bottom: 0.4rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #80cbc4;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #fff;
+  color: #1e3a3a;
+}
+
+input:focus {
+  border-color: #00897b;
+  box-shadow: 0 0 0 3px rgba(0, 137, 123, 0.3);
+}
+
+input.valido {
+  border-color: #2e7d32;
+}
+input.valido:focus {
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+
+input.invalido {
+  border-color: #c62828;
+}
+input.invalido:focus {
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.2);
+}
+
+.mensagem-erro {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #b71c1c;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+button {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #00897b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: #00796b;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.98);
+  background: #00695c;
+}
+
+button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.mensagem-sucesso {
+  margin-top: 1.2rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #e0f2f1;
+  color: #004d40;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+  border-left: 4px solid #00897b;
+}
+
+.mensagem-sucesso.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
